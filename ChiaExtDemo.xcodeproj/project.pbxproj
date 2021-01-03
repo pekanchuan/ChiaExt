@@ -14,6 +14,9 @@
 		C232EC0F25A1E3DD009DA647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C232EC0E25A1E3DD009DA647 /* Assets.xcassets */; };
 		C232EC1225A1E3DD009DA647 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C232EC1025A1E3DD009DA647 /* LaunchScreen.storyboard */; };
 		C2339F5925A1E538008127B8 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2339F5825A1E538008127B8 /* StringExt.swift */; };
+		C2339F5C25A1F04E008127B8 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2339F5B25A1F04E008127B8 /* UIColorExt.swift */; };
+		C2339F5F25A1F62D008127B8 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2339F5E25A1F62D008127B8 /* UIButtonExt.swift */; };
+		C2339F6225A1F66D008127B8 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2339F6125A1F66D008127B8 /* UIImageExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		C232EC1125A1E3DD009DA647 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C232EC1325A1E3DD009DA647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2339F5825A1E538008127B8 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		C2339F5B25A1F04E008127B8 /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
+		C2339F5E25A1F62D008127B8 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
+		C2339F6125A1F66D008127B8 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				C2339F5825A1E538008127B8 /* StringExt.swift */,
+				C2339F5B25A1F04E008127B8 /* UIColorExt.swift */,
+				C2339F5E25A1F62D008127B8 /* UIButtonExt.swift */,
+				C2339F6125A1F66D008127B8 /* UIImageExt.swift */,
 			);
 			path = ChiaExt;
 			sourceTree = "<group>";
@@ -149,8 +158,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C232EC0A25A1E3DC009DA647 /* ViewController.swift in Sources */,
+				C2339F5F25A1F62D008127B8 /* UIButtonExt.swift in Sources */,
+				C2339F6225A1F66D008127B8 /* UIImageExt.swift in Sources */,
 				C232EC0625A1E3DC009DA647 /* AppDelegate.swift in Sources */,
 				C2339F5925A1E538008127B8 /* StringExt.swift in Sources */,
+				C2339F5C25A1F04E008127B8 /* UIColorExt.swift in Sources */,
 				C232EC0825A1E3DC009DA647 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
