@@ -10,7 +10,7 @@ import CryptoKit
 import CommonCrypto
 
 extension String {
-    //  MARK:   MD5加密
+    //  MARK:   MD5
     var MD5: String {
         let data = Data(self.utf8)
         if #available(iOS 13.0, *) {
@@ -26,8 +26,40 @@ extension String {
         }
     }
     
-    //  MARK:   下标
+    //  uppercases only the first letter
+    var capitalizedFirst: String {
+        guard let firstLetter = self.first else { return "" }
+        return firstLetter.uppercased() + self.dropFirst()
+    }
+    
+    //  subscript
     subscript(i: Int) -> String {
         return String(self[index(startIndex, offsetBy: i)])
+    }
+    
+    //  remove a prefix if it exists
+    func deletingPrefix(_ prefix: String) -> String {
+        guard self.hasPrefix(prefix) else {
+            return self
+        }
+        return String(self.dropFirst(prefix.count))
+    }
+    
+    //  remove a suffix if it exists
+    func deletingSuffix(_ suffix: String) -> String {
+        guard self.hasSuffix(suffix) else {
+            return self
+        }
+        return String(self.dropLast(suffix.count))
+    }
+    
+    //  check whether any string in array exists in input string
+    func containsAny(of array: [String]) -> Bool {
+        for item in array {
+            if self.contains(item) {
+                return true
+            }
+        }
+        return false
     }
 }
