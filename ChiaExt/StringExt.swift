@@ -25,4 +25,9 @@ extension String {
             return hash.map { String(format: "%02x", $0) }.joined()
         }
     }
+    
+    //  MARK:   下标
+    subscript(i: Int) -> String {
+        return String(self[index(startIndex, offsetBy: i)])
+    }
 }
