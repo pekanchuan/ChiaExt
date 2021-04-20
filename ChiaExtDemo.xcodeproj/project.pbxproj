@@ -17,7 +17,18 @@
 		C2339F5C25A1F04E008127B8 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2339F5B25A1F04E008127B8 /* UIColorExt.swift */; };
 		C2339F5F25A1F62D008127B8 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2339F5E25A1F62D008127B8 /* UIButtonExt.swift */; };
 		C2339F6225A1F66D008127B8 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2339F6125A1F66D008127B8 /* UIImageExt.swift */; };
+		C27DD876262F27C8002ED829 /* ChiaExtDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27DD875262F27C8002ED829 /* ChiaExtDemoTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C27DD878262F27C8002ED829 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C232EBFA25A1E3DC009DA647 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C232EC0125A1E3DC009DA647;
+			remoteInfo = ChiaExtDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C232EC0225A1E3DC009DA647 /* ChiaExtDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChiaExtDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +43,20 @@
 		C2339F5B25A1F04E008127B8 /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
 		C2339F5E25A1F62D008127B8 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
 		C2339F6125A1F66D008127B8 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
+		C27DD873262F27C8002ED829 /* ChiaExtDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChiaExtDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C27DD875262F27C8002ED829 /* ChiaExtDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiaExtDemoTests.swift; sourceTree = "<group>"; };
+		C27DD877262F27C8002ED829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C232EBFF25A1E3DC009DA647 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C27DD870262F27C8002ED829 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,6 +71,7 @@
 			children = (
 				C2339F5625A1E51B008127B8 /* ChiaExt */,
 				C232EC0425A1E3DC009DA647 /* ChiaExtDemo */,
+				C27DD874262F27C8002ED829 /* ChiaExtDemoTests */,
 				C232EC0325A1E3DC009DA647 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				C232EC0225A1E3DC009DA647 /* ChiaExtDemo.app */,
+				C27DD873262F27C8002ED829 /* ChiaExtDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +110,15 @@
 			path = ChiaExt;
 			sourceTree = "<group>";
 		};
+		C27DD874262F27C8002ED829 /* ChiaExtDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				C27DD875262F27C8002ED829 /* ChiaExtDemoTests.swift */,
+				C27DD877262F27C8002ED829 /* Info.plist */,
+			);
+			path = ChiaExtDemoTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,17 +139,39 @@
 			productReference = C232EC0225A1E3DC009DA647 /* ChiaExtDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C27DD872262F27C8002ED829 /* ChiaExtDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C27DD87C262F27C8002ED829 /* Build configuration list for PBXNativeTarget "ChiaExtDemoTests" */;
+			buildPhases = (
+				C27DD86F262F27C8002ED829 /* Sources */,
+				C27DD870262F27C8002ED829 /* Frameworks */,
+				C27DD871262F27C8002ED829 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C27DD879262F27C8002ED829 /* PBXTargetDependency */,
+			);
+			name = ChiaExtDemoTests;
+			productName = ChiaExtDemoTests;
+			productReference = C27DD873262F27C8002ED829 /* ChiaExtDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		C232EBFA25A1E3DC009DA647 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					C232EC0125A1E3DC009DA647 = {
 						CreatedOnToolsVersion = 12.3;
+					};
+					C27DD872262F27C8002ED829 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = C232EC0125A1E3DC009DA647;
 					};
 				};
 			};
@@ -135,6 +189,7 @@
 			projectRoot = "";
 			targets = (
 				C232EC0125A1E3DC009DA647 /* ChiaExtDemo */,
+				C27DD872262F27C8002ED829 /* ChiaExtDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -147,6 +202,13 @@
 				C232EC1225A1E3DD009DA647 /* LaunchScreen.storyboard in Resources */,
 				C232EC0F25A1E3DD009DA647 /* Assets.xcassets in Resources */,
 				C232EC0D25A1E3DC009DA647 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C27DD871262F27C8002ED829 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +229,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C27DD86F262F27C8002ED829 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C27DD876262F27C8002ED829 /* ChiaExtDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C27DD879262F27C8002ED829 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C232EC0125A1E3DC009DA647 /* ChiaExtDemo */;
+			targetProxy = C27DD878262F27C8002ED829 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C232EC0B25A1E3DC009DA647 /* Main.storyboard */ = {
@@ -343,6 +421,48 @@
 			};
 			name = Release;
 		};
+		C27DD87A262F27C8002ED829 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SM9DH3BE7;
+				INFOPLIST_FILE = ChiaExtDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chia.ChiaExtDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChiaExtDemo.app/ChiaExtDemo";
+			};
+			name = Debug;
+		};
+		C27DD87B262F27C8002ED829 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SM9DH3BE7;
+				INFOPLIST_FILE = ChiaExtDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chia.ChiaExtDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChiaExtDemo.app/ChiaExtDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -360,6 +480,15 @@
 			buildConfigurations = (
 				C232EC1725A1E3DD009DA647 /* Debug */,
 				C232EC1825A1E3DD009DA647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C27DD87C262F27C8002ED829 /* Build configuration list for PBXNativeTarget "ChiaExtDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C27DD87A262F27C8002ED829 /* Debug */,
+				C27DD87B262F27C8002ED829 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
