@@ -19,6 +19,7 @@
 		C2339F6225A1F66D008127B8 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2339F6125A1F66D008127B8 /* UIImageExt.swift */; };
 		C27DD876262F27C8002ED829 /* ChiaExtDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27DD875262F27C8002ED829 /* ChiaExtDemoTests.swift */; };
 		C2A3A1C526960EAC00F5624A /* ArrayExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A3A1C426960EAC00F5624A /* ArrayExt.swift */; };
+		C2A3A1C726960F7F00F5624A /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A3A1C626960F7F00F5624A /* UIViewExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		C27DD875262F27C8002ED829 /* ChiaExtDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiaExtDemoTests.swift; sourceTree = "<group>"; };
 		C27DD877262F27C8002ED829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2A3A1C426960EAC00F5624A /* ArrayExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExt.swift; sourceTree = "<group>"; };
+		C2A3A1C626960F7F00F5624A /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				C2339F5825A1E538008127B8 /* StringExt.swift */,
 				C2A3A1C426960EAC00F5624A /* ArrayExt.swift */,
+				C2A3A1C626960F7F00F5624A /* UIViewExt.swift */,
 				C2339F5B25A1F04E008127B8 /* UIColorExt.swift */,
 				C2339F5E25A1F62D008127B8 /* UIButtonExt.swift */,
 				C2339F6125A1F66D008127B8 /* UIImageExt.swift */,
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A3A1C726960F7F00F5624A /* UIViewExt.swift in Sources */,
 				C232EC0A25A1E3DC009DA647 /* ViewController.swift in Sources */,
 				C2A3A1C526960EAC00F5624A /* ArrayExt.swift in Sources */,
 				C2339F5F25A1F62D008127B8 /* UIButtonExt.swift in Sources */,
