@@ -45,4 +45,10 @@ extension UIButton {
         let edgeOffset = (min(imageSize.height, titleSize.height) + spacing) / 2
         contentEdgeInsets = UIEdgeInsets(top: edgeOffset, left: 0, bottom: edgeOffset, right: 0)
     }
+    
+    func setBackgroundColor(_ color: UIColor, for state: UIControl.State) {
+        let backgroundImage = UIImage.imageWithColor(color: color)
+        
+        self.setBackgroundImage(backgroundImage, for: state)
+    }
 }
