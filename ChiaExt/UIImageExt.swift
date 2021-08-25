@@ -35,4 +35,29 @@ extension UIImage {
         
         return image!
     }
+    
+    
+    /// Scale image size
+    /// - Parameter newSize: image new size
+    /// - Returns: Optional Image
+    func scaled(_ newSize: CGSize) -> UIImage? {
+        guard size != newSize else {
+            return self
+        }
+        
+        let ratio = max(newSize.width / size.width, newSize.height / size.height)
+        let width = size.width * ratio
+        let height = size.height * ratio
+        
+        let scaleRect = CGRect(x: (newSize.width - width) / 2.0, y: (newSize.height - height) / 2.0, width: width, height: height)
+        
+        UIGraphicsBeginImageContextWithOptions(scaleRect.size, false, 0.0)
+        defer {
+            UIGraphicsEndImageContext()
+        }
+        
+        draw(in: scaleRect)
+        
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
 }
