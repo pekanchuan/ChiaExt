@@ -140,4 +140,32 @@ extension UIView {
         self.layer.cornerRadius = radius
         self.layer.maskedCorners = corners
     }
+    
+    enum ViewSide {
+        case top, left, right, bottom
+    }
+    
+    
+    /// Add side border for UIView
+    /// - Parameters:
+    ///   - side: view's side
+    ///   - color: border color
+    ///   - thickness: border width
+    func addBorder(to side: ViewSide, borderColor color: UIColor, borderThickness thickness: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        
+        switch side {
+        case .top:
+            border.frame = CGRect(x: frame.minX, y: frame.minY, width: frame.width, height: thickness)
+        case .left:
+            border.frame = CGRect(x: frame.minX, y: frame.minY, width: thickness, height: frame.height)
+        case .right:
+            border.frame = CGRect(x: frame.maxX, y: frame.minY, width: thickness, height: frame.height)
+        case .bottom:
+            border.frame = CGRect(x: frame.minX, y: frame.maxY, width: frame.width, height: thickness)
+        }
+        
+        layer.addSublayer(border)
+    }
 }
