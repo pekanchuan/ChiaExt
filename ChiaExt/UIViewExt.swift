@@ -7,142 +7,51 @@
 
 import UIKit
 
+// MARK: - enums
+
 extension UIView {
     
-    var width: CGFloat {
-        get { return self.frame.size.width }
-        set {
-            var frame = self.frame
-            frame.size.width = newValue
-            self.frame = frame
-        }
+    enum ViewSide {
+        case top, left, right, bottom
     }
     
-    var height: CGFloat {
-        get { return self.frame.size.height }
-        set {
-            var frame = self.frame
-            frame.size.height = newValue
-            self.frame = frame
-        }
-    }
+}
+
+extension UIView {
     
-    var size: CGSize  {
-        get { return self.frame.size }
-        set {
-            var frame = self.frame
-            frame.size = newValue
-            self.frame = frame
-        }
-    }
     
-    var origin: CGPoint {
-        get { return self.frame.origin }
-        set {
-            var frame = self.frame
-            frame.origin = newValue
-            self.frame = frame
-        }
-    }
-    
-    var x: CGFloat {
-        get { return self.frame.origin.x }
-        set {
-            var frame = self.frame
-            frame.origin.x = newValue
-            self.frame = frame
-        }
-    }
-    var y: CGFloat {
-        get { return self.frame.origin.y }
-        set {
-            var frame = self.frame
-            frame.origin.y = newValue
-            self.frame = frame
-        }
-    }
-    
-    var centerX: CGFloat {
-        get { return self.center.x }
-        set {
-            self.center = CGPoint(x: newValue, y: self.center.y)
-            
-        }
-    }
-    
-    var centerY: CGFloat {
-        get { return self.center.y }
-        set {
-            self.center = CGPoint(x: self.center.x, y: newValue)
-        }
-    }
-    
-    var top : CGFloat {
-        get { return self.frame.origin.y }
-        set {
-            var frame = self.frame
-            frame.origin.y = newValue
-            self.frame = frame
-        }
-    }
-    
-    var bottom : CGFloat {
-        get { return frame.origin.y + frame.size.height }
-        set {
-            var frame = self.frame
-            frame.origin.y = newValue - self.frame.size.height
-            self.frame = frame
-        }
-    }
-    
-    var right : CGFloat {
-        get { return self.frame.origin.x + self.frame.size.width }
-        set {
-            var frame = self.frame
-            frame.origin.x = newValue - self.frame.size.width
-            self.frame = frame
-        }
-    }
-    
-    var left : CGFloat {
-        get { return self.frame.origin.x }
-        set {
-            var frame = self.frame
-            frame.origin.x  = newValue
-            self.frame = frame
-        }
-    }
-    
-    /// set shadow
+    /// SwifterSwift: Add shadow to view.
+    ///
+    /// - Note: This method only works with non-clear background color, or if the view has a `shadowPath` set.
+    /// See parameter `opacity` for detail.
+    ///
     /// - Parameters:
-    ///   - shadowOffset: CGSize
-    ///   - shadowColor: CGColor
-    ///   - shadowOpacity: Float
-    ///   - shadowRadius: CGFloat
-    ///   - cornerRadius: CGFloat
-    func set(shadowOffset: CGSize, shadowColor: CGColor, shadowOpacity: Float, shadowRadius: CGFloat, cornerRadius: CGFloat) {
-        layer.cornerRadius = cornerRadius
-        layer.shadowOffset = shadowOffset
-        layer.shadowColor = shadowColor
-        layer.shadowOpacity = shadowOpacity
-        layer.shadowRadius = shadowRadius
+    ///   - color: shadow color (default is black alpha 0.5).
+    ///   - radius: shadow radius (default is 3).
+    ///   - offset: shadow offset (default is .zero).
+    ///   - opacity: shadow opacity (default is 0.5). It will also be affected by the `alpha` of  `backgroundColor`
+    func addShadow(ofColor color: UIColor = UIColor(white: 0, alpha: 0.5),
+                   radius: CGFloat = 3,
+                   offset: CGSize = .zero,
+                   opacity: Float = 0.5) {
+        layer.shadowColor = color.cgColor
+        layer.shadowOffset = offset
+        layer.shadowRadius = radius
+        layer.shadowOpacity = opacity
         layer.masksToBounds = false
     }
     
     
-    /// set corners
+    /// Set some or all corners radiues of view.
+    ///
     /// - Parameters:
-    ///   - corners: CACornerMask
+    ///   - corners: array of corners to change (example: [.layerMinXMinYCorner, .layerMaxXMaxYCorner]).
     ///   - radius: CGFloat
     ///   - clipToBounds: Bool
     func setCornerBorders(corners: CACornerMask, radius: CGFloat, clipToBounds: Bool = false) {
-        self.clipsToBounds = clipToBounds
-        self.layer.cornerRadius = radius
-        self.layer.maskedCorners = corners
-    }
-    
-    enum ViewSide {
-        case top, left, right, bottom
+        clipsToBounds = clipToBounds
+        layer.cornerRadius = radius
+        layer.maskedCorners = corners
     }
     
     
@@ -168,4 +77,34 @@ extension UIView {
         
         layer.addSublayer(border)
     }
+    
+    
+    /// Load view from nib.
+    /// - Parameters:
+    ///   - name: nib name
+    ///   - bundleOrNil: bundle of nib (default is nil).
+    /// - Returns: optional UIView (if applicable).
+    static func loadFromNib(nibName name: String, bundle bundleOrNil: Bundle? = nil) -> UIView? {
+        return UINib(nibName: name, bundle: bundleOrNil).instantiate(withOwner: nil, options: nil).first as? UIView
+    }
+    
+    
+    /// Load view of a certain type from nib
+    /// - Parameters:
+    ///   - className: UIView type
+    ///   - bundleOrNil: bundle of nib (default if nil)
+    /// - Returns: UIView
+    static func loadFromNib<T: UIView>(withClass className: T.Type, bundle bundleOrNil: Bundle? = nil) -> T {
+        let name = String(describing: className)
+        guard let view = UINib(nibName: name, bundle: bundleOrNil).instantiate(withOwner: nil, options: nil).first as? T else {
+            fatalError("First element in xib file \(name) is not of type \(name)")
+        }
+        return view
+    }
+    
+    func removeSubviews() {
+        subviews.forEach { $0.removeFromSuperview() }
+    }
+    
+    
 }
