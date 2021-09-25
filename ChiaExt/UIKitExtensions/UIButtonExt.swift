@@ -8,7 +8,11 @@
 import UIKit
 
 extension UIButton {
-    //  MARK:   按钮图片文字水平位置、间距
+    
+    /// Horizontal align title text and image.
+    /// - Parameters:
+    ///   - spacing: spacing between title text and image.
+    ///   - imageFirst: set true make image left title text
     func alignHorizontal(spacing: CGFloat, imageFirst: Bool) {
         let edgeOffset = spacing / 2
         
@@ -24,7 +28,11 @@ extension UIButton {
         contentEdgeInsets = UIEdgeInsets(top: 0, left: edgeOffset, bottom: 0, right: edgeOffset)
     }
     
-    //  MARK:   按钮图片文字垂直位置、间距
+    
+    /// Vertical align title text and image.
+    /// - Parameters:
+    ///   - spacing: spacing between title text and image.
+    ///   - imageTop: set true make image  top title text.
     func alignVertical(spacing: CGFloat, imageTop: Bool) {
         guard let imageSize = imageView?.image?.size,
               let text = titleLabel?.text,
