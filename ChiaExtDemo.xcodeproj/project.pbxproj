@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C20C5F75274905540052D3C9 /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C5F74274905540052D3C9 /* DateExt.swift */; };
 		C232EC0625A1E3DC009DA647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C232EC0525A1E3DC009DA647 /* AppDelegate.swift */; };
 		C232EC0825A1E3DC009DA647 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C232EC0725A1E3DC009DA647 /* SceneDelegate.swift */; };
 		C232EC0A25A1E3DC009DA647 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C232EC0925A1E3DC009DA647 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C20C5F74274905540052D3C9 /* DateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
 		C232EC0225A1E3DC009DA647 /* ChiaExtDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChiaExtDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C232EC0525A1E3DC009DA647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C232EC0725A1E3DC009DA647 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C20C5F73274904FE0052D3C9 /* FoundationExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				C2339F5825A1E538008127B8 /* StringExt.swift */,
+				C2A3A1C426960EAC00F5624A /* ArrayExt.swift */,
+				C20C5F74274905540052D3C9 /* DateExt.swift */,
+			);
+			path = FoundationExtensions;
+			sourceTree = "<group>";
+		};
 		C232EBF925A1E3DC009DA647 = {
 			isa = PBXGroup;
 			children = (
@@ -110,8 +122,7 @@
 		C2339F5625A1E51B008127B8 /* ChiaExt */ = {
 			isa = PBXGroup;
 			children = (
-				C2339F5825A1E538008127B8 /* StringExt.swift */,
-				C2A3A1C426960EAC00F5624A /* ArrayExt.swift */,
+				C20C5F73274904FE0052D3C9 /* FoundationExtensions */,
 				C2E3E76026FF66D6004C3AE5 /* UIKitExtensions */,
 			);
 			path = ChiaExt;
@@ -250,6 +261,7 @@
 				C2339F5925A1E538008127B8 /* StringExt.swift in Sources */,
 				C2339F5C25A1F04E008127B8 /* UIColorExt.swift in Sources */,
 				C232EC0825A1E3DC009DA647 /* SceneDelegate.swift in Sources */,
+				C20C5F75274905540052D3C9 /* DateExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
