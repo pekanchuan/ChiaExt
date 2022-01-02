@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C20C39D02781F78E0095BC18 /* UILabelExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C39CF2781F78E0095BC18 /* UILabelExt.swift */; };
 		C20C39D22781F8910095BC18 /* UIImageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C39D12781F8910095BC18 /* UIImageViewExt.swift */; };
+		C20C39D42781FAE70095BC18 /* UIScrollViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C39D32781FAE70095BC18 /* UIScrollViewExt.swift */; };
 		C20C5F75274905540052D3C9 /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C5F74274905540052D3C9 /* DateExt.swift */; };
 		C232EC0625A1E3DC009DA647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C232EC0525A1E3DC009DA647 /* AppDelegate.swift */; };
 		C232EC0825A1E3DC009DA647 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C232EC0725A1E3DC009DA647 /* SceneDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		C20C39CF2781F78E0095BC18 /* UILabelExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExt.swift; sourceTree = "<group>"; };
 		C20C39D12781F8910095BC18 /* UIImageViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExt.swift; sourceTree = "<group>"; };
+		C20C39D32781FAE70095BC18 /* UIScrollViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExt.swift; sourceTree = "<group>"; };
 		C20C5F74274905540052D3C9 /* DateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
 		C232EC0225A1E3DC009DA647 /* ChiaExtDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChiaExtDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C232EC0525A1E3DC009DA647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				C2E3E76326FF6C14004C3AE5 /* UITableViewExt.swift */,
 				C20C39CF2781F78E0095BC18 /* UILabelExt.swift */,
 				C20C39D12781F8910095BC18 /* UIImageViewExt.swift */,
+				C20C39D32781FAE70095BC18 /* UIScrollViewExt.swift */,
 			);
 			path = UIKitExtensions;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				C2339F5925A1E538008127B8 /* StringExt.swift in Sources */,
 				C2339F5C25A1F04E008127B8 /* UIColorExt.swift in Sources */,
 				C232EC0825A1E3DC009DA647 /* SceneDelegate.swift in Sources */,
+				C20C39D42781FAE70095BC18 /* UIScrollViewExt.swift in Sources */,
 				C20C5F75274905540052D3C9 /* DateExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
