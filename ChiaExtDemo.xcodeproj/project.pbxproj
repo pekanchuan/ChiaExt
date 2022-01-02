@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C20C39D02781F78E0095BC18 /* UILabelExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C39CF2781F78E0095BC18 /* UILabelExt.swift */; };
+		C20C39D22781F8910095BC18 /* UIImageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C39D12781F8910095BC18 /* UIImageViewExt.swift */; };
 		C20C5F75274905540052D3C9 /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C5F74274905540052D3C9 /* DateExt.swift */; };
 		C232EC0625A1E3DC009DA647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C232EC0525A1E3DC009DA647 /* AppDelegate.swift */; };
 		C232EC0825A1E3DC009DA647 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C232EC0725A1E3DC009DA647 /* SceneDelegate.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		C20C39CF2781F78E0095BC18 /* UILabelExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExt.swift; sourceTree = "<group>"; };
+		C20C39D12781F8910095BC18 /* UIImageViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExt.swift; sourceTree = "<group>"; };
 		C20C5F74274905540052D3C9 /* DateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
 		C232EC0225A1E3DC009DA647 /* ChiaExtDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChiaExtDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C232EC0525A1E3DC009DA647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				C2E3E76126FF6A7D004C3AE5 /* UIStackViewExt.swift */,
 				C2E3E76326FF6C14004C3AE5 /* UITableViewExt.swift */,
 				C20C39CF2781F78E0095BC18 /* UILabelExt.swift */,
+				C20C39D12781F8910095BC18 /* UIImageViewExt.swift */,
 			);
 			path = UIKitExtensions;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C20C39D22781F8910095BC18 /* UIImageViewExt.swift in Sources */,
 				C20C39D02781F78E0095BC18 /* UILabelExt.swift in Sources */,
 				C2A3A1C726960F7F00F5624A /* UIViewExt.swift in Sources */,
 				C232EC0A25A1E3DC009DA647 /* ViewController.swift in Sources */,
